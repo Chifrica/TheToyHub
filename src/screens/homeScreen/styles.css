@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #1a1a1a;
+  background-color: #ffffff;
+}
+
+.container {
+  padding: 0 5%;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Hero Section */
+.hero-title {
+  font-size: 64px;
+  text-align: center;
+  margin: 40px 0;
+  line-height: 1.1;
+}
+
+.title-badge-img {
+  border: 1px solid #000;
+  border-radius: 50px;
+  padding: 0 15px;
+  font-size: 30px;
+}
+
+.title-badge-gray {
+  background: #e5e5e5;
+  border-radius: 50px;
+  padding: 5px 25px;
+  font-size: 30px;
+}
+
+/* The "Caved" Grid Layout */
+.hero-grid {
+  display: flex;
+  gap: 24px;
+  height: 500px;
+}
+
+.main-banner {
+  flex: 3;
+  position: relative;
+  border-radius: 48px; /* This creates the caved look */
+  overflow: hidden;
+}
+
+.main-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shop-now-btn {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+/* Side Cards */
+.side-stack {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.side-card {
+  flex: 1;
+  border-radius: 32px; /* Smaller caved look */
+  padding: 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.blue-bg { background-color: #f0f7f9; }
+.orange-bg { background-color: #fff4ed; }
+
+.side-card img {
+  height: 120px;
+  object-fit: contain;
+}
+
+.card-info p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.price {
+  color: #777;
+  font-size: 14px;
+}
+
+/* Stats Section */
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.stats-section h2 {
+  font-size: 48px;
+  margin: 0 0 10px 0;
+}
+
+.stats-section p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+}

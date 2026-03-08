@@ -1,0 +1,35 @@
+/* Footer */
+.site-footer {
+    background: #0a0a0a;
+    color: #fff;
+    padding: 100px 5% 40px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 80px;
+}
+
+.footer-logo {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.footer-col h3 {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #aaa;
+}
+
+.footer-col p {
+    font-size: 14px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    border-top: 1px solid #222;
+    padding-top: 30px;
+}
