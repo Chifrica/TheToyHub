@@ -7,10 +7,10 @@ const Header = () => {
       <p className="headerTxt">ToyHub Enterprise</p>
 
       <nav className="nav-links">
-        <a href="#">Products</a>
-        <a href="#">About Us</a>
+        <a href="#">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about-us">About Us</a>
         <a href="#">Our Store</a>
-        <a href="#">Delivery</a>
       </nav>
 
       <div className="header-icons">

@@ -6,7 +6,7 @@ const WhyChooseUs = () => {
   return (
     <section className="about-us">
 
-      <h1 className="about-heading">ABOUT US</h1>
+      <h1 className="about-heading" id="about-us">ABOUT US</h1>
 
       <div className="about-container">
 

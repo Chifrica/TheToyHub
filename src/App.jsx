@@ -18,7 +18,7 @@ function App() {
     <HomeScreen />
     <ProductGrid />
     <WhyChooseUs />
-    <NewsletterCTA />
+    {/* <NewsletterCTA /> */}
     <Footer />
       {/* <div>
         <a href="https://vite.dev" target="_blank">

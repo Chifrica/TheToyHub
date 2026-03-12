@@ -29,7 +29,7 @@ const ProductGrid = () => {
       : products.filter(product => product.category === activeCategory);
 
   return (
-    <section className="product-grid-section">
+    <section className="product-grid-section" id="products">
       <h2 className="section-title">Our Best Quality Products</h2>
 
       <div className="filter-tabs">
