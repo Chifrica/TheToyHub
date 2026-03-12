@@ -1,40 +1,41 @@
-// WhyChooseUs.js
-import React from 'react';
-import './styles.css';
-
-import toy23 from "../../assets/toys23.png"
+import React from "react";
+import "./styles.css";
+import toy23 from "../../assets/toys23.png";
 
 const WhyChooseUs = () => {
-  const items = [
-    { title: "Sustainability", icon: "+" },
-    { title: "Unrivaled quality", icon: "×", active: true },
-    { title: "Unmatched variety", icon: "+" },
-    { title: "Legacy of excellence", icon: "+" },
-  ];
-
   return (
-    <section className="why-choose-us">
-      <div className="video-column">
-        <div className="video-thumb">
-          <img src={toy23} alt="Interior" />
-          <div className="play-btn"><span>▶</span></div>
-        </div>
-        <p className="video-caption">Watch the video and learn more about Modulive</p>
-      </div>
+    <section className="about-us">
 
-      <div className="content-column">
-        <h2 className="column-title">Why Choose Us</h2>
-        <p className="column-desc">Here are the reasons why Modulive stands out as the ultimate choice in lighting solutions</p>
+      <h1 className="about-heading">ABOUT US</h1>
 
-        <div className="accordion">
-          {items.map((item, idx) => (
-            <div className={`accordion-item ${item.active ? 'active' : ''}`} key={idx}>
-              <span className="item-title">{item.title}</span>
-              <span className="item-icon">{item.icon}</span>
-              {item.active && <p className="item-text">Lorem ipsum dolor sit amet consectetur. Tincidunt est uma diam blandit fermentum nunc dolor.</p>}
-            </div>
-          ))}
+      <div className="about-container">
+
+        <div className="about-image">
+          <img src={toy23} alt="ToyHub interior" />
         </div>
+
+        <div className="about-content">
+          <p className="about-text">
+            In a world filled with noisy, disposable playthings, ToyHub stands
+            as a breath of fresh air. We don’t just sell toys; we provide the
+            vessels of imagination that define a child’s early years.
+          </p>
+
+          <p className="about-text">
+            By merging a sophisticated, modern aesthetic with the rugged
+            durability needed for real-world play, ToyHub is where style meets
+            the sidewalk. Every toy we provide is designed to inspire
+            creativity, exploration, and joyful childhood memories.
+          </p>
+
+          <div className="quote-box">
+            <p>
+              “The ToyHub Standard: Beautiful design, durable play, and
+              imagination without limits.”
+            </p>
+          </div>
+        </div>
+
       </div>
     </section>
   );

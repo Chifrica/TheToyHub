@@ -2,7 +2,8 @@
 .site-footer {
     background: #0a0a0a;
     color: #fff;
-    padding: 100px 5% 40px;
+    padding: 50px 5% 40px;
+    margin: -2.5%;
 }
 
 .footer-top {
@@ -32,4 +33,9 @@
 .footer-bottom {
     border-top: 1px solid #222;
     padding-top: 30px;
+}
+
+.footer-legal {
+    flex-direction: row;
+    gap: 30px;
 }

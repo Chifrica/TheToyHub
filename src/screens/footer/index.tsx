@@ -31,7 +31,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <p>© Copyright 2026. ToyHub Enterprise All Rights Reserved.</p>
         <div className="footer-legal">
-          <span>Terms of service</span>
+          <span>Terms of Service</span>
           <span>Privacy Policy</span>
         </div>
       </div>

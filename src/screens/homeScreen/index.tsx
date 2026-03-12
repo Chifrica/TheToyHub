@@ -10,10 +10,11 @@ const HomeScreen = () => {
     <main className="container">
       {/* Hero Section */}
       <section className="hero-section">
-        <h1 className="hero-title">
-          Teach <span className="title-badge-img">🪑</span> your Child with <br />
-          <span className="title-badge-gray">🛋️</span> Educative Toys
-        </h1>
+        <h2 className="hero-title">
+          Built for Adventure, Designed for Childhood. <br />
+          {/* <span className="title-badge-gray">🛋️</span> */}
+          The Home of Timeless Play
+        </h2>
 
         <div className="hero-grid">
           {/* Large Main Image */}

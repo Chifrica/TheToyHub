@@ -8,7 +8,7 @@ const NewsletterCTA = () => {
       {/* Visual CTA Banner */}
       <section className="cta-banner">
         <div className="cta-content">
-          <h1>When We Create Furniture, We Strive For The Finest Quality.</h1>
+          <h1>Legacy of Play that focuses on physical development and outdoor exploration.</h1>
           <button className="btn-white">See Products</button>
         </div>
         <button className="appointment-pill">Book an appointment ↗</button>

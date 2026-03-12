@@ -35,7 +35,7 @@ body {
 
 /* Hero Section */
 .hero-title {
-  font-size: 64px;
+  font-size: 54px;
   text-align: center;
   margin: 40px 0;
   line-height: 1.1;
@@ -65,7 +65,8 @@ body {
 .main-banner {
   flex: 3;
   position: relative;
-  border-radius: 48px; /* This creates the caved look */
+  border-radius: 48px;
+  /* This creates the caved look */
   overflow: hidden;
 }
 
@@ -97,7 +98,8 @@ body {
 
 .side-card {
   flex: 1;
-  border-radius: 32px; /* Smaller caved look */
+  border-radius: 32px;
+  /* Smaller caved look */
   padding: 0px 0px;
   display: flex;
   flex-direction: column;
@@ -105,8 +107,13 @@ body {
   overflow: hidden;
 }
 
-.blue-bg { background-color: #f0f7f9; }
-.orange-bg { background-color: #fff4ed; }
+.blue-bg {
+  background-color: #f0f7f9;
+}
+
+.orange-bg {
+  background-color: #fff4ed;
+}
 
 .side-card img {
   height: 120px;
