@@ -1,41 +1,211 @@
-/* Footer */
+/* Footer Container */
 .site-footer {
     background: #0a0a0a;
     color: #fff;
-    padding: 50px 5% 40px;
-    margin: -2.5%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 3rem 2rem;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    overflow-x: hidden;
 }
 
+/* Footer Top: Responsive Grid/Flex */
 .footer-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer-logo {
-    font-size: 32px;
+    font-size: 1.75rem;
     font-weight: 700;
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 1rem;
+    order: -1;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
 }
 
 .footer-col h3 {
-    font-size: 16px;
-    margin-bottom: 25px;
-    color: #aaa;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    color: #888;
+    margin-top: 0;
 }
 
 .footer-col p {
-    font-size: 14px;
-    margin-bottom: 12px;
-    cursor: pointer;
+    font-size: 0.875rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    margin-top: 0;
 }
 
+.footer-email {
+    font-size: 0.875rem;
+    color: #ccc;
+    text-decoration: none;
+    line-height: 1.6;
+    transition: color 0.2s ease;
+}
+
+.footer-email:hover {
+    color: #fff;
+}
+
+.address {
+    font-size: 0.875rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+/* Footer Bottom: Copyright and Legal */
 .footer-bottom {
     border-top: 1px solid #222;
-    padding-top: 30px;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-copyright p {
+    font-size: 0.8rem;
+    color: #666;
+    margin: 0;
 }
 
 .footer-legal {
-    flex-direction: row;
-    gap: 30px;
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-legal a {
+    font-size: 0.8rem;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-legal a:hover {
+    color: #fff;
+}
+
+/* Tablet View */
+@media (max-width: 1024px) {
+    .site-footer {
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .footer-top {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .footer-logo {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-bottom {
+        gap: 1.5rem;
+        padding-top: 1.5rem;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 2rem 1.5rem;
+    }
+    
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .footer-logo {
+        grid-column: auto;
+        font-size: 1.25rem;
+        margin-bottom: 0;
+    }
+    
+    .footer-col {
+        text-align: center;
+    }
+    
+    .footer-col h3 {
+        margin-bottom: 1rem;
+    }
+    
+    .footer-col p {
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding-top: 1.5rem;
+    }
+    
+    .footer-legal {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+}
+
+/* Small Mobile View */
+@media (max-width: 480px) {
+    .site-footer {
+        padding: 1.5rem 1rem;
+    }
+    
+    .footer-logo {
+        font-size: 1rem;
+    }
+    
+    .footer-col h3 {
+        font-size: 0.8rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .footer-col p,
+    .footer-email,
+    .address {
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-bottom {
+        padding-top: 1rem;
+    }
+    
+    .footer-copyright p,
+    .footer-legal a {
+        font-size: 0.75rem;
+    }
+    
+    .footer-legal {
+        gap: 1rem;
+    }
 }

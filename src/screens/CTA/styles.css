@@ -1,86 +1,196 @@
+/* CTA Newsletter Wrapper */
+.cta-newsletter-wrapper {
+    padding: 0 2rem;
+    max-width: 100%;
+}
+
 /* CTA Banner */
 .cta-banner {
     background: url('https://img.freepik.com/premium-photo/horizontal-shot-baby-wearing-stylish-sweater-playing-with-colorful-rainbow-toys-sitting-floor-with-attentive-look-educational-toys-children-early-development_176532-22872.jpg') center/cover;
-    margin: 0 5%;
-    height: 500px;
-    border-radius: 50px;
+    min-height: 300px;
+    border-radius: 2rem;
     position: relative;
     display: flex;
     align-items: center;
-    padding-left: 80px;
+    padding: 2rem;
     color: #fff;
+    margin-bottom: 2rem;
 }
 
 .cta-content {
-    max-width: 600px;
+    max-width: 100%;
+    flex: 1;
 }
 
 .cta-content h1 {
-    font-size: 48px;
+    font-size: clamp(1.5rem, 4vw, 2.75rem);
     line-height: 1.2;
-    margin-bottom: 30px;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
 }
 
 .btn-white {
     background: #fff;
     color: #000;
     border: none;
-    padding: 15px 40px;
-    border-radius: 40px;
+    padding: 0.75rem 2rem;
+    border-radius: 2.5rem;
     font-weight: 600;
     cursor: pointer;
+    font-size: 0.95rem;
+    transition: background 0.2s ease;
+}
+
+.btn-white:hover {
+    background: #f0f0f0;
 }
 
 .appointment-pill {
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 1.5rem;
+    right: 1.5rem;
     background: #000;
     color: #fff;
     border: none;
-    padding: 12px 25px;
-    border-radius: 30px;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
     cursor: pointer;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    transition: background 0.2s ease;
+}
+
+.appointment-pill:hover {
+    background: #333;
 }
 
 /* Newsletter */
 .newsletter-section {
     text-align: center;
-    padding: 120px 0;
+    padding: 3rem 2rem;
 }
 
 .newsletter-section h2 {
-    font-size: 40px;
-    margin-bottom: 40px;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 2rem;
+    margin-top: 0;
 }
 
 .newsletter-section .highlight {
     font-weight: 800;
-    font-size: 55px;
+    font-size: clamp(2rem, 8vw, 3.5rem);
 }
 
 .newsletter-input-group {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     border: 1px solid #ddd;
-    padding: 8px 8px 8px 25px;
-    border-radius: 50px;
-    width: 500px;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    border-radius: 3rem;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 0.75rem;
+}
+
+.mail-icon {
+    font-size: 1.25rem;
+    flex-shrink: 0;
 }
 
 .newsletter-input-group input {
     border: none;
     outline: none;
     flex: 1;
-    padding: 0 15px;
-    font-size: 16px;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    min-width: 0;
+}
+
+.newsletter-input-group input::placeholder {
+    color: #999;
 }
 
 .sub-btn {
     background: #1a1a1a;
     color: #fff;
     border: none;
-    padding: 14px 35px;
-    border-radius: 40px;
+    padding: 0.75rem 1.75rem;
+    border-radius: 2.5rem;
     cursor: pointer;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background 0.2s ease;
+    flex-shrink: 0;
+}
+
+.sub-btn:hover {
+    background: #333;
+}
+
+@media (max-width: 768px) {
+    .cta-newsletter-wrapper {
+        padding: 0 1.5rem;
+    }
+    
+    .cta-banner {
+        padding: 1.5rem;
+        min-height: 250px;
+    }
+    
+    .appointment-pill {
+        top: 1rem;
+        right: 1rem;
+        padding: 0.6rem 1rem;
+        font-size: 0.75rem;
+    }
+    
+    .newsletter-section {
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .newsletter-input-group {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-newsletter-wrapper {
+        padding: 0 1rem;
+    }
+    
+    .cta-banner {
+        padding: 1.25rem;
+        min-height: 200px;
+    }
+    
+    .cta-content h1 {
+        margin-bottom: 1rem;
+    }
+    
+    .btn-white {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.85rem;
+    }
+    
+    .appointment-pill {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.7rem;
+    }
+    
+    .newsletter-section {
+        padding: 2rem 1rem;
+    }
+    
+    .newsletter-input-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .newsletter-input-group input {
+        width: 100%;
+    }
+    
+    .sub-btn {
+        width: 100%;
+    }
 }

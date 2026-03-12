@@ -6,46 +6,16 @@ body {
 }
 
 .container {
-  padding: 0 5%;
-}
-
-/* Header Styles */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 5%;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.nav-links {
-  display: flex;
-  gap: 30px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #666;
-  font-weight: 500;
+  padding: 0 2rem;
+  max-width: 100%;
 }
 
 /* Hero Section */
 .hero-title {
-  font-size: 54px;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   text-align: center;
-  margin: 40px 0;
-  line-height: 1.1;
-}
-
-.title-badge-img {
-  border: 1px solid #000;
-  border-radius: 50px;
-  padding: 0 15px;
-  font-size: 30px;
+  margin: 2rem 0 3rem 0;
+  line-height: 1.2;
 }
 
 .title-badge-gray {
@@ -58,16 +28,22 @@ body {
 /* The "Caved" Grid Layout */
 .hero-grid {
   display: flex;
-  gap: 24px;
-  height: 500px;
+  gap: 1.5rem;
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 300px;
+  max-height: 500px;
+  margin-bottom: 2rem;
 }
 
 .main-banner {
   flex: 3;
   position: relative;
-  border-radius: 48px;
-  /* This creates the caved look */
+  border-radius: 2rem;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-banner img {
@@ -78,14 +54,21 @@ body {
 
 .shop-now-btn {
   position: absolute;
-  bottom: 30px;
-  right: 30px;
+  bottom: 1.5rem;
+  right: 1.5rem;
   background: #000;
   color: #fff;
   border: none;
-  padding: 15px 30px;
-  border-radius: 40px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2.5rem;
   cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.shop-now-btn:hover {
+  background: #333;
 }
 
 /* Side Cards */
@@ -93,18 +76,22 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 1.5rem;
 }
 
 .side-card {
   flex: 1;
-  border-radius: 32px;
-  /* Smaller caved look */
-  padding: 0px 0px;
+  border-radius: 1.5rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.side-card:hover {
+  transform: translateY(-2px);
 }
 
 .blue-bg {
@@ -116,38 +103,117 @@ body {
 }
 
 .side-card img {
-  height: 120px;
-  object-fit: contain;
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.card-info {
+  padding: 0.5rem 0;
 }
 
 .card-info p {
-  margin: 0;
+  margin: 0.25rem 0;
   font-weight: 600;
+  font-size: 0.95rem;
 }
 
 .price {
   color: #777;
-  font-size: 14px;
+  font-size: 0.85rem;
 }
 
 /* Stats Section */
 .stats-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  margin-top: 80px;
-  padding-top: 40px;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
   border-top: 1px solid #eee;
   text-align: center;
 }
 
 .stats-section h2 {
-  font-size: 48px;
-  margin: 0 0 10px 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
 }
 
 .stats-section p {
   color: #666;
-  font-size: 14px;
+  font-size: 0.9rem;
   line-height: 1.5;
+  margin: 0;
+}
+
+.stat-item {
+  padding: 1rem 0;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .hero-grid {
+    max-height: 400px;
+  }
+  
+  .side-stack {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-grid {
+    flex-direction: column;
+    max-height: none;
+    gap: 1rem;
+  }
+  
+  .main-banner {
+    min-height: 250px;
+  }
+  
+  .side-stack {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .side-card {
+    flex: 1;
+    min-height: 150px;
+  }
+  
+  .stats-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .hero-title {
+    margin: 1.5rem 0 2rem 0;
+  }
+  
+  .shop-now-btn {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .side-stack {
+    flex-direction: column;
+  }
+  
+  .stats-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
