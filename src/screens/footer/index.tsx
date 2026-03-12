@@ -25,8 +25,12 @@ const Footer = () => {
         {/* Column 3 */}
         <div className="footer-col">
           <h3>Connect</h3>
-          <p>Instagram</p>
-          <p>Facebook</p>
+          <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+            WhatsApp
+          </a>
+          <a href="https://www.facebook.com/toyhub" target="_blank" rel="noopener noreferrer">
+            Facebook
+          </a>
         </div>
 
         {/* Column 4 */}
