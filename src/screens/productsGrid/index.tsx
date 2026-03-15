@@ -25,7 +25,7 @@ const ProductGrid = () => {
     {
       id: 1,
       name: "Excavator",
-      price: "$66.00",
+      price: "₦66.00",
       img: excavator,
       category: "Vehicles",
       description: "A durable toy excavator with movable arm and realistic design. Perfect for sandbox play and imaginative construction adventures.",
@@ -33,7 +33,7 @@ const ProductGrid = () => {
     {
       id: 2,
       name: "Tricycle",
-      price: "$126.00",
+      price: "₦126.00",
       img: tricycle1,
       category: "Vehicles",
       description: "Sturdy steel-frame tricycle built for kids aged 2–5. Non-slip pedals and a wide stable base ensure a safe, fun ride.",
@@ -41,7 +41,7 @@ const ProductGrid = () => {
     {
       id: 3,
       name: "Radio Fly Scooter",
-      price: "$138.00",
+      price: "₦138.00",
       img: radioFlyScooter,
       category: "Vehicles",
       description: "Remote-controlled scooter with smooth gliding wheels and responsive steering. A thrilling ride for kids on the go.",
@@ -49,7 +49,7 @@ const ProductGrid = () => {
     {
       id: 4,
       name: "Trike Gas Scooter",
-      price: "$100.00",
+      price: "₦100.00",
       img: trikeGasScooter2,
       category: "Vehicles",
       description: "Three-wheel gas-style scooter with a sporty look and stable ride. Great for outdoor play and developing balance skills.",
@@ -57,7 +57,7 @@ const ProductGrid = () => {
     {
       id: 5,
       name: "Caterpillar",
-      price: "$86.00",
+      price: "₦86.00",
       img: toys22,
       category: "Building",
       description: "Colorful building caterpillar toy that sparks creativity and fine motor skills. Stack, connect, and build to your imagination.",
@@ -65,7 +65,7 @@ const ProductGrid = () => {
     {
       id: 6,
       name: "Jelly Cat",
-      price: "$222.00",
+      price: "₦222.00",
       img: jellycatGray,
       category: "Animal",
       description: "Ultra-soft plush Jellycat companion made from premium hypoallergenic fabric. A perfect cuddle buddy for children of all ages.",

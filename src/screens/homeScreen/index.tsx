@@ -4,6 +4,8 @@ import './styles.css';
 import toys21 from "../../assets/toys21.jpg";
 import bearChildren from '../../assets/bearChildren.png';
 import chairImage from '../../assets/toys23.png';
+import bearChildrenRed from '../../assets/bearChildrenRed.png'
+import jellyCat from '../../assets/JellycatGray.png'
 
 const HomeScreen = () => {
   return (
@@ -29,14 +31,15 @@ const HomeScreen = () => {
               <img src={chairImage} alt="" />
               <div className="card-info">
                 <p>Bear</p>
-                <p className="price">$126.00</p>
+                <p className="price">₦126.00</p>
               </div>
             </div>
+
             <div className="side-card orange-bg">
-              <img src={bearChildren} alt="Elite Chair" style={{ objectFit: 'fill', height: "140px" }} />
+              <img src={chairImage} alt="Elite Chair" style={{ objectFit: 'fill', height: "140px" }} />
               <div className="card-info">
                 <p>Pikish Bear</p>
-                <p className="price">$150.00</p>
+                <p className="price">₦150.00</p>
               </div>
             </div>
           </div>
