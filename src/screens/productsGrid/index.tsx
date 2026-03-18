@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./styles.css";
+import { useCart } from "../../context/CartContext";
 
 import tricycle1 from "../../assets/tricycle1.png";
 import excavator from "../../assets/Excavator.png";
@@ -20,6 +21,7 @@ interface Product {
 const ProductGrid = () => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [flippedId, setFlippedId] = useState<number | null>(null);
+  const { addToCart, searchTerm } = useCart();
 
   const products: Product[] = [
     {
@@ -76,8 +78,8 @@ const ProductGrid = () => {
 
   const filteredProducts =
     activeCategory === "All"
-      ? products
-      : products.filter((p) => p.category === activeCategory);
+      ? products.filter(p => p.name.toLowerCase().includes(searchTerm.toLowerCase()) || p.description.toLowerCase().includes(searchTerm.toLowerCase()))
+      : products.filter((p) => p.category === activeCategory && (p.name.toLowerCase().includes(searchTerm.toLowerCase()) || p.description.toLowerCase().includes(searchTerm.toLowerCase())));
 
   const handleFlip = (id: number) => {
     setFlippedId((prev) => (prev === id ? null : id));
@@ -109,32 +111,34 @@ const ProductGrid = () => {
             key={product.id}
             onClick={() => handleFlip(product.id)}
           >
-            {/* Front */}
-            <div className="card-face card-front">
-              <div className="product-image-container">
-                <img src={product.img} alt={product.name} />
+            <div className="card-inner">
+              {/* Front */}
+              <div className="card-face card-front">
+                <div className="product-image-container">
+                  <img src={product.img} alt={product.name} />
+                </div>
+                <div className="product-info">
+                  <span className="product-name">{product.name}</span>
+                  <span className="product-price">{product.price}</span>
+                </div>
               </div>
-              <div className="product-info">
-                <span className="product-name">{product.name}</span>
-                <span className="product-price">{product.price}</span>
-              </div>
-            </div>
 
-            {/* Back */}
-            <div className="card-face card-back">
-              <h3 className="back-title">{product.name}</h3>
-              <p className="back-description">{product.description}</p>
-              <div className="back-footer">
-                <span className="back-price">{product.price}</span>
-                <button
-                  className="add-to-cart-btn"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    // cart logic here
-                  }}
-                >
-                  Add to Cart
-                </button>
+              {/* Back */}
+              <div className="card-face card-back">
+                <h3 className="back-title">{product.name}</h3>
+                <p className="back-description">{product.description}</p>
+                <div className="back-footer">
+                  <span className="back-price">{product.price}</span>
+                  <button
+                    className="add-to-cart-btn"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      addToCart(product);
+                    }}
+                  >
+                    Add to Cart
+                  </button>
+                </div>
               </div>
             </div>
           </div>

@@ -1,13 +1,13 @@
-/* Product Grid Section */
 .product-grid-section {
-    padding: 3rem 2rem;
+    padding: 7rem 2rem;
     text-align: center;
 }
 
 .section-title {
     font-size: clamp(1.75rem, 4vw, 2.5rem);
     margin-bottom: 2rem;
-    margin-top: 0;
+    margin-top: 5%;
+    text-align: center;
 }
 
 .filter-tabs {
@@ -40,115 +40,99 @@
     border-color: #000;
 }
 
+/* GRID */
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
-
-.product-card {
-    background: #f8f8f8;
-    border-radius: 1.25rem;
-    padding: 1.25rem;
-    position: relative;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    overflow: hidden;
-}
-
-.product-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.product-image-container {
-    height: 200px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border-radius: 0.75rem;
-    margin-bottom: 1rem;
-    /* background: #fff; */
-}
-
-.product-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.card-arrow {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    background: #000;
-    color: #fff;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.card-arrow:hover {
-    transform: scale(1.1);
-}
-
-.product-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-}
-
-.product-name {
-    font-weight: 600;
-    font-size: 0.95rem;
-    flex: 1;
-    text-align: left;
-}
-
-.product-price {
-    font-weight: 600;
-    font-size: 0.9rem;
-    white-space: nowrap;
-}
-
-/* ── Flip mechanics ── */
-.product-grid {
+    gap: 1.2rem;
     perspective: 1200px;
 }
 
+/* CARD */
+
 .product-card {
-    background: transparent;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.55s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+    height: 340px;
+    perspective: 1200px;
     cursor: pointer;
-    min-height: 280px;
-    /* allow the card to pop out during rotation */
-    overflow: visible;
 }
 
-.product-card.flipped {
-    transform: rotateY(180deg);
-    z-index: 1; /* keep flipped card above neighbors */
+/* INNER FLIP */
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.65s cubic-bezier(.4, .2, .2, 1);
 }
+
+.product-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* CARD FACE */
 
 .card-face {
     position: absolute;
     inset: 0;
     backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    border-radius: 1.25rem;
-    padding: 1.25rem;
+    border-radius: 18px;
+    padding: 1.2rem;
     display: flex;
     flex-direction: column;
+}
+
+/* FRONT */
+
+.card-front {
+    background: #f8f8f8;
+}
+
+/* BACK */
+
+.card-back {
+    background: #0a0a0a;
+    color: white;
+    transform: rotateY(180deg);
+    justify-content: space-between;
+}
+
+/* IMAGE */
+
+.product-image-container {
+    /* width: 100%; */
+    height: 200px;
+    /* background: #fff; */
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.product-image-container img {
+    /* width: 100%; */
+    height: 100%;
+    object-fit: contain;
+}
+
+/* INFO */
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.product-name {
+    font-weight: 600;
+}
+
+.product-price {
+    font-weight: 600;
+}
+
+/* ── Flip mechanics ── */
+.product-card.flipped {
+    z-index: 1;
 }
 
 /* ── Front face ── */
@@ -215,7 +199,7 @@
 
 
 @media (max-width: 1024px) {
-     .product-card {
+    .product-card {
         min-height: 260px;
     }
 
@@ -230,6 +214,12 @@
 
     .product-image-container {
         height: 180px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 

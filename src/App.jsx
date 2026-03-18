@@ -8,39 +8,33 @@ import ProductGrid from './screens/productsGrid'
 import WhyChooseUs from './screens/features'
 import NewsletterCTA from './screens/CTA'
 import Footer from './screens/footer'
+import Stores from './screens/stores'
+import Cart from './screens/Cart'
+import Checkout from './screens/Checkout'
+import { CartProvider } from './context/CartContext'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-    <Header />
-    <HomeScreen />
-    <ProductGrid />
-    <WhyChooseUs />
-    {/* <NewsletterCTA /> */}
-    <Footer />
-      {/* <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
-    </>
+    <CartProvider>
+      <Header />
+      <Routes>
+        <Route path="/" element={
+          <>
+            <HomeScreen />
+            <ProductGrid />
+            <WhyChooseUs />
+            {/* <NewsletterCTA /> */}
+            <Footer />
+          </>
+        } />
+        <Route path="/stores" element={<Stores />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
+      </Routes>
+    </CartProvider>
   )
 }
 
