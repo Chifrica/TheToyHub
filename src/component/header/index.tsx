@@ -21,6 +21,8 @@ const Header = () => {
 
       <nav className={`nav-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
         <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
+        <a href="#products">Products</a>
+        <a href="#about-us">About Us</a>
         <Link to="/stores" onClick={() => setIsMobileMenuOpen(false)}>Our Store</Link>
       </nav>
 

@@ -29,7 +29,7 @@ const ProductGrid = () => {
       name: "Excavator",
       price: "₦66.00",
       img: excavator,
-      category: "Vehicles",
+      category: "Building",
       description: "A durable toy excavator with movable arm and realistic design. Perfect for sandbox play and imaginative construction adventures.",
     },
     {
@@ -45,7 +45,7 @@ const ProductGrid = () => {
       name: "Radio Fly Scooter",
       price: "₦138.00",
       img: radioFlyScooter,
-      category: "Vehicles",
+      category: "Animal",
       description: "Remote-controlled scooter with smooth gliding wheels and responsive steering. A thrilling ride for kids on the go.",
     },
     {
