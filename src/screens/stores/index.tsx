@@ -89,15 +89,24 @@ const Stores = () => {
               <img src={product.img} alt={product.name} />
             </div>
             <div className="product-info">
-              <span className="product-name">{product.name}</span>
-              <span className="product-price">{product.price}</span>
+
+              {/* Row 1 */}
+              <div className="product-top">
+                <span className="product-name">{product.name}</span>
+                <span className="product-price">{product.price}</span>
+              </div>
+
+              {/* Row 2 */}
               <p className="product-description">{product.description}</p>
+
+              {/* Row 3 */}
               <button
                 className="add-to-cart-btn"
                 onClick={() => addToCart(product)}
               >
                 Add to Cart
               </button>
+
             </div>
           </div>
         ))}
