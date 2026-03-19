@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.css';
+import logo from "../../assets/ToyHub Logo2.png"
 
 const Footer = () => {
   return (
@@ -20,7 +21,10 @@ const Footer = () => {
         </div>
 
         {/* Logo - Centered in desktop view */}
-        <div className="footer-logo">ToyHub Enterprise</div>
+        <div className="footer-logo">
+          <img src={logo} alt="" height={40} width={40} />
+          <p>ToyHub Enterprise</p>
+        </div>
 
         {/* Column 3 */}
         <div className="footer-col">
@@ -37,7 +41,7 @@ const Footer = () => {
         <div className="footer-col">
           <h3>Contact</h3>
           <p className="address">
-            No. 7 Oroyinyin Street Off Docemu, <br /> 
+            No. 7 Oroyinyin Street Off Docemu, <br />
             Idumota Lagos Island State,
           </p>
           <a href="mailto:toyhubenterprises2442@gmail.com" className="footer-email">

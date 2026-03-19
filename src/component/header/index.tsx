@@ -4,6 +4,8 @@ import { useCart } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 import './styles.css';
 
+import logo from "../../assets/ToyHub Logo2.png"
+
 const Header = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
@@ -17,6 +19,7 @@ const Header = () => {
 
   return (
     <header className="header">
+      <img src={logo} alt="" height={40} width={40} />
       <p className="headerTxt">ToyHub Enterprise</p>
 
       <nav className={`nav-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
