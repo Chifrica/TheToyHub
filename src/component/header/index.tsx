@@ -24,8 +24,8 @@ const Header = () => {
 
       <nav className={`nav-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
         <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
-        <a href="#products">Products</a>
-        <a href="#about-us">About Us</a>
+        <a href="#products" onClick={() => setIsMobileMenuOpen(false)}>Products</a>
+        <a href="#about-us" onClick={() => setIsMobileMenuOpen(false)}>About Us</a>
         <Link to="/stores" onClick={() => setIsMobileMenuOpen(false)}>Our Store</Link>
       </nav>
 
@@ -48,9 +48,12 @@ const Header = () => {
           <ShoppingBag size={20} />
           {getCartCount() > 0 && <span className="cart-count">{getCartCount()}</span>}
         </Link>
-        <User size={20} />
-        <div className="mobile-menu-icon" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-          {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+        {/* <User size={20} /> */}
+        <div
+          className="mobile-menu-icon"
+          onClick={() => setIsMobileMenuOpen(prev => !prev)}
+        >
+          {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
         </div>
       </div>
     </header>
