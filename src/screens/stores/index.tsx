@@ -84,7 +84,7 @@ const Stores = () => {
       <h2 className="section-title">Our Store</h2>
       <div className="product-grid">
         {products.filter(p => p.name.toLowerCase().includes(searchTerm.toLowerCase()) || p.description.toLowerCase().includes(searchTerm.toLowerCase())).map((product) => (
-          <div key={product.id} className="product-card">
+          <div key={product.id} className="product-cards">
             <div className="product-image-container">
               <img src={product.img} alt={product.name} />
             </div>

@@ -78,8 +78,14 @@ const ProductGrid = () => {
 
   const filteredProducts =
     activeCategory === "All"
-      ? products.filter(p => p.name.toLowerCase().includes(searchTerm.toLowerCase()) || p.description.toLowerCase().includes(searchTerm.toLowerCase()))
-      : products.filter((p) => p.category === activeCategory && (p.name.toLowerCase().includes(searchTerm.toLowerCase()) || p.description.toLowerCase().includes(searchTerm.toLowerCase())));
+      ? products.filter(
+        p => p.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          p.description.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+      : products.filter((p) => p.category === activeCategory && (
+        p.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        p.description.toLowerCase().includes(searchTerm.toLowerCase()))
+      );
 
   const handleFlip = (id: number) => {
     setFlippedId((prev) => (prev === id ? null : id));
