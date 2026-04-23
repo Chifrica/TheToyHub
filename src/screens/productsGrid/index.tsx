@@ -8,6 +8,7 @@ import radioFlyScooter from "../../assets/radioFlyScooter.png";
 import trikeGasScooter2 from "../../assets/trikeGasScooter2.png";
 import toys22 from "../../assets/toys22.png";
 import jellycatGray from "../../assets/JellycatGray.png";
+import space_rocket from "../../assets/space_rocket.jpg"
 
 interface Product {
   id: number;
@@ -66,6 +67,22 @@ const ProductGrid = () => {
     },
     {
       id: 6,
+      name: "Jelly Cat",
+      price: "₦222.00",
+      img: jellycatGray,
+      category: "Animal",
+      description: "Ultra-soft plush Jellycat companion made from premium hypoallergenic fabric. A perfect cuddle buddy for children of all ages.",
+    },
+    {
+      id: 7,
+      name: "Space Rocket",
+      price: "₦222.00",
+      img: space_rocket,
+      category: "Vehicles",
+      description: "Ultra-soft plush Jellycat companion made from premium hypoallergenic fabric. A perfect cuddle buddy for children of all ages.",
+    },
+    {
+      id: 8,
       name: "Jelly Cat",
       price: "₦222.00",
       img: jellycatGray,
